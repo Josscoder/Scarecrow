@@ -1,0 +1,23 @@
+{
+  "name": "Scarecrow",
+  "version": "1.0.0",
+  "description": "A bot for discord, written in js, essential for many tasks within a server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josscoder/Scarecrow.git"
+  },
+  "keywords": [],
+  "author": "Josscoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josscoder/Scarecrow/issues"
+  },
+  "homepage": "https://github.com/Josscoder/Scarecrow#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  }
+}
