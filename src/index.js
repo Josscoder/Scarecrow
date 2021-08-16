@@ -1,5 +1,6 @@
 const { Client, Intents, MessageEmbed } = require("discord.js");
 const { token } = require("../resources/config.json");
+const { avatar } = require("../resources/config.json");
 
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
@@ -10,6 +11,8 @@ client.login(token)
 
 client.on('ready', () => {
     console.log('This BOT has been enabled!');
+
+    client.user.setAvatar(avatar).then();
     client.user.setStatus('online');
     client.user.setActivity('UbblyClub Staff', { type: 'WATCHING' });
 });
@@ -27,7 +30,11 @@ client.on('messageCreate', msg => {
         return
     }
 
-    if (msg.content === 'Hola' || msg.content === "Hi") {
+    if (msg.content === 'Hola' ||
+        msg.content === "Hi" ||
+        msg.content === "Olá" ||
+        msg.content === "Ola"
+    ) {
         msg.react('👋').then();
     }
 });
