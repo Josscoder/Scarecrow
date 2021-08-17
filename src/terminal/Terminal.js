@@ -2,7 +2,7 @@ const textFormat = require("../utils/TextFormat.js");
 const dateTime = require("node-datetime");
 
 class Terminal {
-  start() {
+  start(client, token) {
     const now = dateTime.create();
     now.format("m/d/Y H:M:S");
     const date = new Date(now.now());
@@ -16,6 +16,35 @@ class Terminal {
         textFormat.DARK_GRAY +
         "Starting..."
     );
+
+    client
+      .login(token)
+      .then(() =>
+        console.log(
+          textFormat.DARK_AQUA +
+            "[" +
+            date +
+            "]" +
+            "[Scarecrow] " +
+            textFormat.DARK_GREEN +
+            "The BOT was successfully authenticated!"
+        )
+      );
+
+    client.on("ready", () => {
+      console.log(
+        textFormat.DARK_AQUA +
+          "[" +
+          date +
+          "]" +
+          "[Scarecrow] " +
+          textFormat.DARK_GREEN +
+          "This BOT has been enabled!"
+      );
+
+      client.user.setStatus("online");
+      client.user.setActivity("UbblyClub Staff", { type: "WATCHING" });
+    });
 
     const stdin = process.openStdin();
 
