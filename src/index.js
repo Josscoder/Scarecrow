@@ -1,18 +1,46 @@
+const terminal = require("./terminal/Terminal");
+
 const { Client, Intents, MessageEmbed } = require("discord.js");
 const { token } = require("../resources/config.json");
 const libquery = require("libquery");
-const mcpeping = require("mcpe-ping");
+
+const textFormat = require("./utils/TextFormat.js");
+const dateTime = require("node-datetime");
 
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
 
+new terminal().start();
+
+const now = dateTime.create();
+now.format("m/d/Y H:M:S");
+const date = new Date(now.now());
+
 client
   .login(token)
-  .then(() => console.log("The BOT was successfully authenticated!"));
+  .then(() =>
+    console.log(
+      textFormat.DARK_AQUA +
+        "[" +
+        date +
+        "]" +
+        "[Scarecrow] " +
+        textFormat.DARK_GREEN +
+        "The BOT was successfully authenticated!"
+    )
+  );
 
 client.on("ready", () => {
-  console.log("This BOT has been enabled!");
+  console.log(
+    textFormat.DARK_AQUA +
+      "[" +
+      date +
+      "]" +
+      "[Scarecrow] " +
+      textFormat.DARK_GREEN +
+      "This BOT has been enabled!"
+  );
 
   client.user.setStatus("online");
   client.user.setActivity("UbblyClub Staff", { type: "WATCHING" });
@@ -68,7 +96,7 @@ module.exports = {
             }`
           )
           .setFooter(`play.ubbly.club`)
-          .setTimestamp(new Date());
+          .setTimestamp();
         message.channel.send(embed);
       });
     } catch (e) {

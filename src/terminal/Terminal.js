@@ -1,7 +1,7 @@
 const textFormat = require("../utils/TextFormat.js");
 const dateTime = require("node-datetime");
 
-class Console {
+class Terminal {
   start() {
     const now = dateTime.create();
     now.format("m/d/Y H:M:S");
@@ -14,7 +14,7 @@ class Console {
         "]" +
         "[Scarecrow] " +
         textFormat.DARK_GRAY +
-        "Starting services..."
+        "Starting..."
     );
 
     const stdin = process.openStdin();
@@ -23,6 +23,7 @@ class Console {
       switch (data.toString().trim()) {
         case "stop":
         case "kill":
+        case "end":
           console.log(
             textFormat.DARK_AQUA +
               "[" +
@@ -30,7 +31,7 @@ class Console {
               "]" +
               "[Scarecrow] " +
               textFormat.DARK_GRAY +
-              "Services stopped correctly..."
+              "Stopped successfully..."
           );
           process.exit(0);
           break;
@@ -39,4 +40,4 @@ class Console {
   }
 }
 
-module.exports = Console;
+module.exports = Terminal;
