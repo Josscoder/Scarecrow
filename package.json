@@ -4,7 +4,8 @@
   "description": "A bot for discord, written in js, essential for many tasks within a server",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "optimize_code": "npx prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,11 @@
   "homepage": "https://github.com/Josscoder/Scarecrow#readme",
   "dependencies": {
     "discord.js": "^13.1.0",
+    "libquery": "^1.0.2",
+    "mcpe-ping": "0.0.4",
     "node": "16.6.1"
+  },
+  "devDependencies": {
+    "prettier": "2.3.2"
   }
 }
