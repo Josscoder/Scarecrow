@@ -26,6 +26,7 @@ $ npm i minecraft-server-util
 ```sh
 $ npm start
 ```
+4) Remember to place the token of your BOT in the configuration that is in the following path "Scarecrow/src/resources/config.json"
 
 ## Terminal Commands
 
