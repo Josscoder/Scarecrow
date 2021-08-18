@@ -1,7 +1,7 @@
 {
   "name": "scarecrow",
   "version": "1.0.0",
-  "description": "A bot for discord, written in js, essential for many tasks within a server",
+  "description": "A Discord bot, written in js, helps with many essential tasks",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",

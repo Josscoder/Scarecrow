@@ -1,5 +1,15 @@
 const { MessageEmbed } = require("discord.js");
 const util = require("minecraft-server-util");
+const {
+  name,
+  store,
+  twitter,
+  discord,
+  ip,
+  port,
+  thumbnail,
+  color,
+} = require("../resources/mcstatusconfig.json");
 
 class MessageCreateEvent {
   register(client) {
@@ -24,15 +34,14 @@ class MessageCreateEvent {
             .setColor("#34EB89")
             .setTitle("My Author is Josscoder")
             .setDescription(
-                "**Github:** https://github.com/Josscoder" +
+              "**Github:** https://github.com/Josscoder" +
                 "\n" +
                 "**Twitter:** https://twitter.com/Josscoder/" +
                 "\n" +
                 "**Discord:** Josscoder#9867"
             )
-            .setThumbnail(
-              "https://avatars.githubusercontent.com/u/49004785?v=4"
-            );
+            .setThumbnail("https://avatars.githubusercontent.com/u/49004785")
+            .setFooter("All rights reserved Jose Luciano Mejia Arias ©");
           channel.send({ embeds: [authorEmbed] });
 
           break;
@@ -45,20 +54,21 @@ class MessageCreateEvent {
 
           try {
             util
-              .statusBedrock("play.ubbly.club")
+              .statusBedrock(ip, { port: port })
               .then((response) => {
                 const statusEmbed = new MessageEmbed()
-                  .setColor("#279AF1")
-                  .setThumbnail(
-                    "https://cdn.discordapp.com/icons/746778901761753108/d0badb148ea6b4d156f18209a469c3c3.png?size=1024"
-                  )
-                  .setTitle("UbblyClub Status")
+                  .setColor(color)
+                  .setThumbnail(thumbnail)
+                  .setTitle(name + " Status")
                   .setDescription(
-                    "**Store:** https://store.ubbly.club/" +
+                    "**Store:** " +
+                      store +
                       "\n" +
-                      "**Twitter:** https://twitter.com/ubblyclub/" +
+                      "**Twitter:** " +
+                      twitter +
                       "\n" +
-                      "**Discord:** discord.gg/ubblyclub"
+                      "**Discord:** " +
+                      discord
                   )
                   .addField(
                     "Player Count",
@@ -66,7 +76,7 @@ class MessageCreateEvent {
                     true
                   )
                   .addField("Version", `${response.version || "Unknown"}`, true)
-                  .setFooter(`play.ubbly.club`)
+                  .setFooter(ip)
                   .setTimestamp();
                 channel.send({ embeds: [statusEmbed] });
               })

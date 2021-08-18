@@ -1,8 +1,9 @@
 const textFormat = require("../utils/TextFormat.js");
 const dateTime = require("node-datetime");
+const { token } = require("../resources/config.json");
 
 class Terminal {
-  start(client, token) {
+  start(client) {
     const now = dateTime.create();
     now.format("m/d/Y H:M:S");
     const date = new Date(now.now());
