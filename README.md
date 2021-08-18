@@ -12,19 +12,19 @@ If you encounter any bugs, have suggestions or questions, [create an issue](http
 
 1) clone this repository in your device:
 ```sh
-$ git clone https://github.com/Josscoder/Scarecrow.git
+git clone https://github.com/Josscoder/Scarecrow.git
 ```
 2) go to the repository folder and download the modules:
 ```sh
-$ npm install discord.js
+npm install discord.js
 ```
 and after
 ```sh
-$ npm i minecraft-server-util
+npm i minecraft-server-util
 ```
 3) ready, it's time to run our bot:
 ```sh
-$ npm start
+npm start
 ```
 4) Remember to place the token of your BOT in the configuration that is in the following path "Scarecrow/src/resources/config.json"
 
