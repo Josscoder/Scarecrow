@@ -1,9 +1,9 @@
 {
-  "name": "UbblyClub",
-  "store": "https://store.ubbly.club/",
-  "twitter": "https://twitter.com/UbblyClub/",
-  "discord": "discord.gg/ubblyclub",
-  "ip": "play.ubbly.club",
+  "name": "Ectary",
+  "store": "none",
+  "twitter": "none",
+  "discord": "none",
+  "ip": "ectary.club",
   "port": 19132,
   "thumbnail": "https://cdn.discordapp.com/icons/746778901761753108/d0badb148ea6b4d156f18209a469c3c3.png?size=1024",
   "color": "#34EB89"
