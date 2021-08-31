@@ -22,11 +22,7 @@ and after
 ```sh
 npm i minecraft-server-util
 ```
-3) ready, it's time to run our bot:
-```sh
-npm start
-```
-4) Remember to place the token of your BOT in the configuration that is in the following path "Scarecrow/src/resources/config.json"
+3) Remember to place the token of your BOT in the configuration that is in the following path "Scarecrow/src/resources/config.json"
 
 ## Terminal Commands
 
@@ -56,7 +52,6 @@ These previous commands are used to turn off the bot.
   "port": 19132, # Here you put the port of the server
   "thumbnail": "", # This is optional, here you put the server image or another one you want
   "color": "#34EB89" # This is the color that will be in the embed, in the following link you can select a color
+  # https://htmlcolors.com/google-color-picker
   }
 ```
-
-https://htmlcolors.com/google-color-picker
