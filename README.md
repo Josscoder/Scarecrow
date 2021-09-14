@@ -20,7 +20,7 @@ npm install discord.js
 ```
 and after
 ```sh
-npm i minecraft-server-util
+npm install minecraft-server-util
 ```
 3) Remember to place the token of your BOT in the configuration that is in the following path "Scarecrow/src/resources/config.json"
 
