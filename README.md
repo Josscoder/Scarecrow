@@ -1,6 +1,6 @@
 # Scarecrow
 
-A Discord bot, written in js, helps with many essential tasks.
+> A Discord bot, written in js, helps with many essential tasks.
 
 If you encounter any bugs, have suggestions or questions, [create an issue](https://github.com/Josscoder/Scarecrow/issues/new).
 
